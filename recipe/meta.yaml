@@ -1,5 +1,5 @@
 {% set name = "pyubxutils" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyubxutils-{{ version }}.tar.gz
-  sha256: 52932b67773ee104029aed1be8806082ef2dae1a28262415fb731bc3fc5a8538
+  sha256: 4919e65bd7f9000b30f22bec63e4811c2a6787123ef577eb2908b7731b79ba89
 build:
   entry_points:
     - ubxsetrate = pyubxutils.ubxsetrate:main
     - ubxsave = pyubxutils.ubxsave:main
     - ubxload = pyubxutils.ubxload:main
+    - ubxbase = pyubxutils.ubxbase:main
     - ubxsimulator = pyubxutils.ubxsimulator_cli:main
     - ubxcompare = pyubxutils.ubxcompare:main
 
@@ -40,6 +41,7 @@ test:
     - ubxsetrate --help
     - ubxsave --help
     - ubxload --help
+    - ubxbase --help
     - ubxcompare --help
   requires:
     - python {{ python_min }}
