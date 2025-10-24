@@ -1,5 +1,5 @@
 {% set name = "pyubxutils" %}
-{% set version = "1.0.3" %}
+{% set version = "1.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyubxutils-{{ version }}.tar.gz
-  sha256: fa87ac36f12097c02666c04030e5625c7ec7e9031adc52981fd860eede1af054
+  sha256: f12134bbe8daaf71eab6c0155c28a3e29343995a8403f87b2095d04ed99d442e
 build:
   entry_points:
     - ubxsetrate = pyubxutils.ubxsetrate:main
@@ -30,7 +30,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - pyserial >=3.5
-    - pyubx2 >=1.2.52
+    - pyubx2 >=1.2.58
 
 test:
   imports:
