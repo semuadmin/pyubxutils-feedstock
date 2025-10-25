@@ -1,5 +1,5 @@
 {% set name = "pyubxutils" %}
-{% set version = "1.0.4" %}
+{% set version = "1.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyubxutils-{{ version }}.tar.gz
-  sha256: f12134bbe8daaf71eab6c0155c28a3e29343995a8403f87b2095d04ed99d442e
+  sha256: 69e919d087e0e8b4e312dd5cb52793b8c75d1556c1794e44b01896d5130bea25
 build:
   entry_points:
     - ubxsetrate = pyubxutils.ubxsetrate:main
